@@ -44,6 +44,36 @@ npm run dev
 npm run build
 ```
 
+## 🌐 部署到 Render
+
+本專案已配置好 Render 部署設定，可以輕鬆部署到 Render 平台。
+
+### 使用 render.yaml 自動部署
+
+1. 將專案推送到 GitHub 或 GitLab
+2. 登入 [Render](https://render.com/)
+3. 點擊「New +」→「Static Site」
+4. 連接你的 Git 儲存庫
+5. Render 會自動偵測 `render.yaml` 配置：
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `dist`
+6. 點擊「Create Static Site」完成部署
+
+### 手動配置（不使用 render.yaml）
+
+如果選擇手動配置，請在 Render 控制台設定：
+
+- **Name**: `fish-market`（或自訂名稱）
+- **Environment**: `Static Site`
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `dist`
+
+### 注意事項
+
+- Render 會自動處理 React Router 的路由重寫（已配置在 `render.yaml` 中）
+- 部署後，Render 會提供一個免費的 `.onrender.com` 網域
+- 可以自訂網域或使用 Render 提供的網域
+
 ## 📂 專案結構
 
 ```
