@@ -1,0 +1,297 @@
+[
+  {
+    "name": "紅肉旗魚",
+    "sizeStr": "200-350 cm",
+    "maxSize": 350
+  },
+  {
+    "name": "雨傘旗魚",
+    "sizeStr": "200-300 cm",
+    "maxSize": 300
+  },
+  {
+    "name": "真鯊屬",
+    "sizeStr": "100-300 cm",
+    "maxSize": 300
+  },
+  {
+    "name": "康氏馬加鰆",
+    "sizeStr": "100-240 cm",
+    "maxSize": 240
+  },
+  {
+    "name": "金梭魚",
+    "sizeStr": "40-180 cm",
+    "maxSize": 180
+  },
+  {
+    "name": "紅魽魚鯛",
+    "sizeStr": "60-150 cm",
+    "maxSize": 150
+  },
+  {
+    "name": "帶魚屬",
+    "sizeStr": "60-150 cm",
+    "maxSize": 150
+  },
+  {
+    "name": "其他鯊",
+    "sizeStr": "80-150 cm",
+    "maxSize": 150
+  },
+  {
+    "name": "鬼頭刀",
+    "sizeStr": "80-140 cm",
+    "maxSize": 140
+  },
+  {
+    "name": "尖吻鱸",
+    "sizeStr": "50-120 cm",
+    "maxSize": 120
+  },
+  {
+    "name": "日本花鱸",
+    "sizeStr": "60-100 cm",
+    "maxSize": 100
+  },
+  {
+    "name": "虱目魚",
+    "sizeStr": "40-100 cm",
+    "maxSize": 100
+  },
+  {
+    "name": "日本馬加鰆",
+    "sizeStr": "60-100 cm",
+    "maxSize": 100
+  },
+  {
+    "name": "魟類",
+    "sizeStr": "40-100 cm",
+    "maxSize": 100
+  },
+  {
+    "name": "現流鮭",
+    "sizeStr": "60-100 cm",
+    "maxSize": 100
+  },
+  {
+    "name": "鐮鰺",
+    "sizeStr": "40-90 cm",
+    "maxSize": 90
+  },
+  {
+    "name": "棕點石斑",
+    "sizeStr": "40-90 cm",
+    "maxSize": 90
+  },
+  {
+    "name": "馬鰺科",
+    "sizeStr": "30-80 cm",
+    "maxSize": 80
+  },
+  {
+    "name": "真鯛",
+    "sizeStr": "30-80 cm",
+    "maxSize": 80
+  },
+  {
+    "name": "臺灣馬加鰆",
+    "sizeStr": "50-80 cm",
+    "maxSize": 80
+  },
+  {
+    "name": "紅牙(魚威)",
+    "sizeStr": "40-80 cm",
+    "maxSize": 80
+  },
+  {
+    "name": "鯧鰺",
+    "sizeStr": "40-80 cm",
+    "maxSize": 80
+  },
+  {
+    "name": "點帶石斑",
+    "sizeStr": "30-80 cm",
+    "maxSize": 80
+  },
+  {
+    "name": "鸚哥魚科",
+    "sizeStr": "30-70 cm",
+    "maxSize": 70
+  },
+  {
+    "name": "鸚哥魚",
+    "sizeStr": "30-70 cm",
+    "maxSize": 70
+  },
+  {
+    "name": "鮃鰭類",
+    "sizeStr": "30-60 cm",
+    "maxSize": 60
+  },
+  {
+    "name": "其他鯛",
+    "sizeStr": "20-60 cm",
+    "maxSize": 60
+  },
+  {
+    "name": "平鯛",
+    "sizeStr": "30-60 cm",
+    "maxSize": 60
+  },
+  {
+    "name": "龍占魚科",
+    "sizeStr": "30-60 cm",
+    "maxSize": 60
+  },
+  {
+    "name": "章魚",
+    "sizeStr": "30-60 cm",
+    "maxSize": 60
+  },
+  {
+    "name": "其他笛鯛",
+    "sizeStr": "30-60 cm",
+    "maxSize": 60
+  },
+  {
+    "name": "烏鰺",
+    "sizeStr": "30-50 cm",
+    "maxSize": 50
+  },
+  {
+    "name": "黑棘鯛",
+    "sizeStr": "30-50 cm",
+    "maxSize": 50
+  },
+  {
+    "name": "黑(魚威)",
+    "sizeStr": "30-50 cm",
+    "maxSize": 50
+  },
+  {
+    "name": "馬頭魚",
+    "sizeStr": "30-50 cm",
+    "maxSize": 50
+  },
+  {
+    "name": "頻鯛科",
+    "sizeStr": "30-50 cm",
+    "maxSize": 50
+  },
+  {
+    "name": "龍蝦科",
+    "sizeStr": "20-50 cm",
+    "maxSize": 50
+  },
+  {
+    "name": "鯖仔",
+    "sizeStr": "20-45 cm",
+    "maxSize": 45
+  },
+  {
+    "name": "真鰺",
+    "sizeStr": "20-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "黃背牙鯛",
+    "sizeStr": "25-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "白姑魚",
+    "sizeStr": "20-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "圓花鰹",
+    "sizeStr": "20-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "合齒魚科",
+    "sizeStr": "20-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "鮐魚科",
+    "sizeStr": "20-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "白腹鯖",
+    "sizeStr": "20-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "烏賊",
+    "sizeStr": "15-40 cm",
+    "maxSize": 40
+  },
+  {
+    "name": "金線魚",
+    "sizeStr": "20-35 cm",
+    "maxSize": 35
+  },
+  {
+    "name": "大棘大眼鯛",
+    "sizeStr": "20-35 cm",
+    "maxSize": 35
+  },
+  {
+    "name": "花身雞",
+    "sizeStr": "15-30 cm",
+    "maxSize": 30
+  },
+  {
+    "name": "蝦姑",
+    "sizeStr": "15-30 cm",
+    "maxSize": 30
+  },
+  {
+    "name": "藍圓鰺",
+    "sizeStr": "20-30 cm",
+    "maxSize": 30
+  },
+  {
+    "name": "雙鬚鰺科",
+    "sizeStr": "15-30 cm",
+    "maxSize": 30
+  },
+  {
+    "name": "鋸緣青蟹",
+    "sizeStr": "15-25 cm (甲寬)",
+    "maxSize": 25
+  },
+  {
+    "name": "鱚科",
+    "sizeStr": "15-25 cm",
+    "maxSize": 25
+  },
+  {
+    "name": "銹斑蟳",
+    "sizeStr": "10-25 cm",
+    "maxSize": 25
+  },
+  {
+    "name": "遠海梭子蟹",
+    "sizeStr": "10-20 cm (甲寬)",
+    "maxSize": 20
+  },
+  {
+    "name": "紅星梭子蟹",
+    "sizeStr": "10-20 cm",
+    "maxSize": 20
+  },
+  {
+    "name": "其他",
+    "sizeStr": "多樣",
+    "maxSize": 0
+  },
+  {
+    "name": "其他蟳螯類",
+    "sizeStr": "多樣",
+    "maxSize": 0
+  }
+]
