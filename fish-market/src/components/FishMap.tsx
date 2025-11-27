@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { fishData as initialFishData } from '../data/fishData';
 import type { FishInfo } from '../data/fishData';
 import { FishTooltip } from './FishTooltip';
+import { FishSizeComparator } from './FishSizeComparator';
 import { motion } from 'framer-motion';
 
 export const FishMap = () => {
@@ -12,6 +13,7 @@ export const FishMap = () => {
   
   // Debug mode state
   const [debugMode, setDebugMode] = useState(false);
+  const [showComparator, setShowComparator] = useState(false);
   
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -201,8 +203,18 @@ export const FishMap = () => {
         )}
       </div>
 
-      {/* Debug Mode Switcher */}
-      <div className="mt-2">
+      {/* Tools Bar */}
+      <div className="mt-2 flex items-center gap-4">
+        {/* Size Comparator Button */}
+        <button
+          onClick={() => setShowComparator(true)}
+          className="flex items-center gap-2 text-sm text-blue-600 bg-white px-3 py-2 rounded-lg shadow-sm border border-slate-200 hover:bg-blue-50 transition-colors"
+        >
+          <span className="text-lg">🐟</span>
+          <span className="font-bold">魚類大小比一比</span>
+        </button>
+
+        {/* Debug Mode Switcher */}
         <label className="flex items-center gap-2 text-sm text-slate-500 bg-white px-3 py-2 rounded-lg shadow-sm border border-slate-200 hover:bg-slate-50 transition-colors">
           <span className={`w-2 h-2 rounded-full ${debugMode ? 'bg-orange-500 animate-pulse' : 'bg-green-500'}`}></span>
           <select 
@@ -215,6 +227,11 @@ export const FishMap = () => {
           </select>
         </label>
       </div>
+
+      {/* Size Comparator Overlay */}
+      {showComparator && (
+        <FishSizeComparator onClose={() => setShowComparator(false)} />
+      )}
     </div>
   );
 };
