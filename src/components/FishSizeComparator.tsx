@@ -53,7 +53,7 @@ export const FishSizeComparator = ({ onClose }: FishSizeComparatorProps) => {
   }, []);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
     if (isPlaying) {
       // 根據當前組別的魚數量決定停留時間
       const currentGroupSize = fishGroups[currentGroupIndex]?.length || 1;
