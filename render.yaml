@@ -2,6 +2,7 @@ services:
   - type: web
     name: fish-market
     env: static
+    nodeVersion: 24.11.0
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     routes:
