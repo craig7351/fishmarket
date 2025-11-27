@@ -8,23 +8,33 @@ interface FishTooltipProps {
 export const FishTooltip = ({ fish }: FishTooltipProps) => {
   // 計算魚的中心點位置
   const centerX = fish.position.left + fish.position.width / 2;
-  const centerY = fish.position.top + fish.position.height / 2;
+  
+  // 判斷是否在下半部 (大於 50%)，如果是，則將 Tooltip 顯示在上方
+  const isLowerHalf = fish.position.top > 50;
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8, y: 10, x: "-50%" }}
+      // 根據位置調整動畫方向
+      initial={{ opacity: 0, scale: 0.8, y: isLowerHalf ? -10 : 10, x: "-50%" }}
       animate={{ opacity: 1, scale: 1, y: 0, x: "-50%" }}
-      exit={{ opacity: 0, scale: 0.8, y: 10, x: "-50%" }}
+      exit={{ opacity: 0, scale: 0.8, y: isLowerHalf ? -10 : 10, x: "-50%" }}
       transition={{ duration: 0.3, type: "spring", stiffness: 200, damping: 20 }}
       className="absolute z-50 w-72 bg-white/95 backdrop-blur-md rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] border border-white/50 overflow-hidden pointer-events-none"
       style={{
         left: `${centerX}%`,
-        // 讓視窗顯示在魚的下方 (top + height)，並加上一點間距
-        top: `${fish.position.top + fish.position.height + 2}%`,
+        // 如果在下半部，定位 bottom 在魚的頂部；否則定位 top 在魚的底部
+        ...(isLowerHalf 
+          ? { bottom: `${100 - fish.position.top + 2}%`, top: 'auto' } 
+          : { top: `${fish.position.top + fish.position.height + 2}%`, bottom: 'auto' }
+        ),
       }}
     >
-      {/* 連接線 (Optional: 增加一個指向魚的小箭頭) */}
-      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-900 rotate-45" />
+      {/* 連接線 (箭頭)，根據位置調整方向 */}
+      <div 
+        className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-900 rotate-45 ${
+          isLowerHalf ? '-bottom-2' : '-top-2'
+        }`} 
+      />
 
       {/* Header */}
       <div className="relative bg-slate-900 text-white p-4 pt-5">
@@ -60,4 +70,3 @@ export const FishTooltip = ({ fish }: FishTooltipProps) => {
     </motion.div>
   );
 };
-

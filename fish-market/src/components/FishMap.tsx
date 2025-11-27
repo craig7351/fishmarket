@@ -39,11 +39,11 @@ export const FishMap = () => {
       <div className="w-full flex gap-4 items-start">
         {/* Main Map Area */}
         <div 
-          className="relative w-full max-w-6xl bg-slate-200 rounded-lg shadow-xl overflow-hidden select-none"
+          className="relative w-full max-w-6xl bg-slate-200 rounded-lg shadow-xl select-none"
           ref={containerRef}
         >
           {/* The Image */}
-          <div className="relative aspect-[16/9] w-full bg-slate-300">
+          <div className="relative aspect-[16/9] w-full bg-slate-300 overflow-hidden rounded-lg">
             <img 
               src="/img/fish.png" 
               alt="Fish Market Board" 
