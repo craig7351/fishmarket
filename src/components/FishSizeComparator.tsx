@@ -132,6 +132,60 @@ export const FishSizeComparator = ({ onClose }: FishSizeComparatorProps) => {
             transition={{ type: "spring", stiffness: 200, damping: 25 }}
             className="flex flex-wrap items-end justify-center gap-8 w-full z-10 px-10"
           >
+            {/* 人類比例尺 (170cm) */}
+            {(() => {
+              const humanHeight = 170; // 人類身高 170cm
+              const humanWidthPercentage = (humanHeight / maxFishSize) * 100;
+              
+              return (
+                <div className="flex flex-col items-center group relative">
+                  {/* 人類圖示 */}
+                  <div 
+                    className="relative transition-all duration-500 origin-bottom"
+                    style={{
+                      width: `calc(${humanWidthPercentage}vw * 0.9)`,
+                      minWidth: '40px',
+                      height: `calc(${humanWidthPercentage}vw * 0.9 * 0.4)`, // 人類寬高比約 2.5:1
+                      display: 'flex',
+                      alignItems: 'flex-end',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {/* 簡單的人類輪廓 SVG */}
+                    <svg 
+                      width="100%" 
+                      height="100%" 
+                      viewBox="0 0 100 250" 
+                      preserveAspectRatio="xMidYMax meet"
+                      className="drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
+                    >
+                      {/* 頭部 */}
+                      <circle cx="50" cy="30" r="20" fill="#fbbf24" stroke="#f59e0b" strokeWidth="2"/>
+                      {/* 身體 */}
+                      <rect x="35" y="50" width="30" height="80" rx="5" fill="#3b82f6" stroke="#2563eb" strokeWidth="2"/>
+                      {/* 手臂 */}
+                      <rect x="15" y="60" width="20" height="60" rx="10" fill="#3b82f6" stroke="#2563eb" strokeWidth="2" transform="rotate(-20 25 90)"/>
+                      <rect x="65" y="60" width="20" height="60" rx="10" fill="#3b82f6" stroke="#2563eb" strokeWidth="2" transform="rotate(20 75 90)"/>
+                      {/* 腿部 */}
+                      <rect x="38" y="130" width="12" height="120" rx="6" fill="#1e40af" stroke="#1e3a8a" strokeWidth="2"/>
+                      <rect x="50" y="130" width="12" height="120" rx="6" fill="#1e40af" stroke="#1e3a8a" strokeWidth="2"/>
+                    </svg>
+                    
+                    {/* Hover Tooltip */}
+                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                      人類 ({humanHeight}cm)
+                    </div>
+                  </div>
+
+                  {/* 標籤 */}
+                  <div className="mt-2 text-center">
+                    <h3 className="text-sm md:text-xl font-bold text-amber-300">人類</h3>
+                    <p className="text-xs md:text-sm text-yellow-400 font-mono">{humanHeight} cm</p>
+                  </div>
+                </div>
+              );
+            })()}
+            
             {currentGroup.map((fish) => {
                 // 計算每隻魚的寬度比例
                 const widthPercentage = (fish.maxSize / maxFishSize) * 100;
