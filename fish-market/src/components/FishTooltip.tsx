@@ -36,6 +36,21 @@ export const FishTooltip = ({ fish }: FishTooltipProps) => {
         }`} 
       />
 
+      {/* Fish Image (Cropped from main board) */}
+      <div 
+        className="w-full bg-slate-200 border-b border-slate-900"
+        style={{
+          // Maintain aspect ratio based on fish dimensions (Assuming board is 16:9)
+          aspectRatio: `${(fish.position.width * 16) / (fish.position.height * 9)}`,
+          backgroundImage: 'url(/img/fish.png)',
+          backgroundRepeat: 'no-repeat',
+          // Zoom to match fish width
+          backgroundSize: `${(100 / fish.position.width) * 100}% auto`,
+          // Position to show the specific fish
+          backgroundPosition: `${(fish.position.left / (100 - fish.position.width)) * 100}% ${(fish.position.top / (100 - fish.position.height)) * 100}%`
+        }}
+      />
+
       {/* Header */}
       <div className="relative bg-slate-900 text-white p-4 pt-5">
         <div className="flex justify-between items-end">
